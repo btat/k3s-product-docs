@@ -1,3 +1,6 @@
 [submodule "product-docs-supplemental-files"]
 	path = product-docs-supplemental-files
 	url = https://github.com/rancher/product-docs-supplemental-files
+[submodule "pd-helpers-test"]
+	path = pd-helpers-test
+	url = https://github.com/btat/pd-helpers-test
