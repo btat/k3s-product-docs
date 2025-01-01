@@ -21,12 +21,10 @@ jobs:
         run: make environment
       - name: Generate Site
         # run: make local
-        run: |
-          mkdir -p tmp
-          npx antora --stacktrace --log-file tmp/local-build.log --log-format=pretty --log-level=info --log-failure-level=warn playbook-local.yml
+        run: npx antora --stacktrace --log-file local-build.log --log-format=pretty --log-level=info --log-failure-level=warn playbook-local.yml
       - name: INFO issues
         run: |
-          if [ grep "INFO (asciidoctor)" tmp/local-build.log ]; then
+          if [[] grep "INFO (asciidoctor)" local-build.log ]]; then
             echo "INFO (asciidoctor) issue found"
             exit 1
           else
