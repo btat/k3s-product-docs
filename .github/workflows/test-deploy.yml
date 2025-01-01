@@ -21,7 +21,8 @@ jobs:
         run: make environment
       - name: Generate Site
         # run: make local
-        run: npx antora --stacktrace --log-file local-build.log --log-format=pretty --log-level=info --log-failure-level=warn playbook-local.yml
+        run: |
+          npx antora --stacktrace --log-file local-build.log --log-format=pretty --log-level=info --log-failure-level=warn playbook-local.yml
       - name: INFO issues
         run: |
           if [[] grep "INFO (asciidoctor)" local-build.log ]]; then

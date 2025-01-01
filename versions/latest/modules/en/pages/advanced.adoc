@@ -8,7 +8,7 @@ This section contains advanced information describing the different ways you can
 
 K3s generates self-signed Certificate Authority (CA) Certificates during startup of the first server node. These CA certificates are valid for 10 years, and are not automatically renewed.
 
-For information on using custom CA certificates, or renewing the self-signed CA certificates, see the xref:cli/certificate123.adoc#_certificate_authority_ca_certificates[`k3s certificate rotate-ca` command documentation].
+For information on using custom CA certificates, or renewing the self-signed CA certificates, see the xref:cli/certificate.adoc#_certificate_authority_ca_certificates[`k3s certificate rotate-ca` command documentation].
 
 === Client and Server certificates
 
