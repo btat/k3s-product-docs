@@ -22,8 +22,7 @@ jobs:
         run: make local
       - name: INFO issues
         run: |
-          if [ grep "INFO (asciidoctor)" tmp/local-build.log ]
-          then
+          if [ grep "INFO (asciidoctor)" tmp/local-build.log ]; then
             echo "INFO (asciidoctor) issue found"
             exit 1
           else
