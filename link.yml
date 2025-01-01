@@ -1,0 +1,14 @@
+dirs:
+  - ./versions/latest/modules/en
+excludedFiles:
+  - nav.adoc
+fileExtensions:
+  - adoc
+useGitIgnore: true
+ignorePatterns:
+  - pattern: '^https?://k3s.example.com.*$'
+  - pattern: '^https?://your-proxy.example.com.*$'
+  - pattern: '^https?://kubernetes.default.svc.cluster.local$'
+  - pattern: '^https?://127.0.0.1.*$'
+  - pattern: '^https?://10.10.10.*$'
+  - pattern: '^https?://registry.example.com.*$'
