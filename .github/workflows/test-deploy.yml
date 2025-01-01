@@ -4,6 +4,7 @@ on:
   pull_request:
     paths-ignore:
       - '**/README.md'
+    types: [opened, edited, synchronize, reopened]
 
 jobs:
   test-deploy:
@@ -19,7 +20,10 @@ jobs:
       - name: Install Antora
         run: make environment
       - name: Generate Site
-        run: make local
+        # run: make local
+        run: |
+          mkdir -p tmp
+          npx antora --stacktrace --log-file tmp/local-build.log --log-format=pretty --log-level=info --log-failure-level=warn playbook-local.yml
       - name: INFO issues
         run: |
           if [ grep "INFO (asciidoctor)" tmp/local-build.log ]; then
