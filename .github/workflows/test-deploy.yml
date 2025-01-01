@@ -23,6 +23,8 @@ jobs:
         # run: make local
         run: |
           npx antora --stacktrace --log-file local-build.log --log-format=pretty --log-level=info --log-failure-level=warn playbook-local.yml
+      - name: View logs
+        run: cat local-build.log
       - name: INFO issues
         run: |
           if [[ grep "INFO (asciidoctor)" local-build.log ]]; then
