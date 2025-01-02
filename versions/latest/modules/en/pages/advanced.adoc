@@ -14,7 +14,7 @@ For information on using custom CA certificates, or renewing the self-signed CA 
 
 K3s client and server certificates are valid for 365 days from their date of issuance. Any certificates that are expired, or within 90 days of expiring, are automatically renewed every time K3s starts.
 
-For information on manually rotating client and server certificates, see the xref:cli/certificate2.adoc#_client_and_server_certificates[`k3s certificate rotate` command documentation].
+For information on manually rotating client and server certificates, see the xref:cli/certificate.adoc#_client_and_server_certificates[`k3s certificate rotate` command documentation].
 
 == Token Management
 

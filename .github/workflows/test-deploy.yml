@@ -30,6 +30,11 @@ jobs:
             playbook-local.yml 2>&1 | tee local-build.log 2>&1
             BUILD_STATUS=${PIPESTATUS[0]}
             echo "The value of BUILD_STATUS is $BUILD_STATUS"
+            if grep "INFO (asciidoctor)" local-build.log; then
+              echo "INFO (asciidoctor) issue found"
+              BUILD_STATUS
+            fi
+            echo "The value of BUILD_STATUS is $BUILD_STATUS"
   #        echo "BUILD_STATUS=${PIPESTATUS[0]}" >> $GITHUB_ENV
       # - name: View logs
       #   run: |
