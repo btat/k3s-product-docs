@@ -28,11 +28,13 @@ jobs:
             --log-level=info \
             --log-failure-level=warn \
             playbook-local.yml 2>&1 | tee local-build.log 2>&1
-          echo "BUILD_STATUS=${PIPESTATUS[0]}" >> $GITHUB_ENV
-      - name: View logs
-        run: |
-          echo "The value of BUILD_STATUS is $BUILD_STATUS"
-          cat local-build.log
+            BUILD_STATUS=${PIPESTATUS[0]}
+            echo "The value of BUILD_STATUS is $BUILD_STATUS"
+  #        echo "BUILD_STATUS=${PIPESTATUS[0]}" >> $GITHUB_ENV
+      # - name: View logs
+      #   run: |
+      #     echo "The value of BUILD_STATUS is $BUILD_STATUS"
+      #     cat local-build.log
       - name: INFO issues
         run: |
           if grep "INFO (asciidoctor)" local-build.log; then
