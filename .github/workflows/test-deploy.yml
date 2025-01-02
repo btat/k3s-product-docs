@@ -32,7 +32,7 @@ jobs:
             echo "The value of BUILD_STATUS is $BUILD_STATUS"
             if grep "INFO (asciidoctor)" local-build.log; then
               echo "INFO (asciidoctor) issue found"
-              BUILD_STATUS
+              BUILD_STATUS=1
             fi
             echo "The value of BUILD_STATUS is $BUILD_STATUS"
   #        echo "BUILD_STATUS=${PIPESTATUS[0]}" >> $GITHUB_ENV
