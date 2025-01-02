@@ -22,9 +22,17 @@ jobs:
       - name: Generate Site
         # run: make local
         run: |
-          npx antora --stacktrace --log-file local-build.log --log-format=pretty --log-level=info --log-failure-level=warn playbook-local.yml
+          npx antora --stacktrace \
+            --log-file local-build.log \
+            --log-format=pretty \
+            --log-level=info \
+            --log-failure-level=warn \
+            playbook-local.yml 2>&1 | tee local-build.log 2>&1
+          echo "BUILD_STATUS=${PIPESTATUS[0]}" >> $GITHUB_ENV
       - name: View logs
-        run: cat local-build.log
+        run: |
+          echo "The value of BUILD_STATUS is $BUILD_STATUS"
+          cat local-build.log
       - name: INFO issues
         run: |
           if grep "INFO (asciidoctor)" local-build.log; then
