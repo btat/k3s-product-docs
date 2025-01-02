@@ -27,7 +27,7 @@ jobs:
         run: cat local-build.log
       - name: INFO issues
         run: |
-          if [[ grep "INFO (asciidoctor)" local-build.log ]]; then
+          if grep "INFO (asciidoctor)" local-build.log; then
             echo "INFO (asciidoctor) issue found"
             exit 1
           else
