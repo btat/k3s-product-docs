@@ -24,6 +24,7 @@ jobs:
         GH_TOKEN: ${{ github.token }}
       run: |
         gh issue create \
+          --repo btat/k3s-product-docs \
           --title 'Port Community docs PR #${{github.event.pull_request.number}}: ${{github.event.pull_request.title}}' \
           --body 'Ref: https://github.com/${{github.repository}}/pull/${{github.event.pull_request.number}}' \
           --label port/community-product 
