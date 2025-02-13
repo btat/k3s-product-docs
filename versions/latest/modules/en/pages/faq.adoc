@@ -4,7 +4,7 @@ The FAQ is updated periodically and designed to answer the questions our users m
 
 == Is K3s a suitable replacement for Kubernetes?
 
-K3s is a CNCF-certified Kubernetes distribution, and can do everything required of a standard Kubernetes cluster. It is just a more lightweight version. See the xref:introduction.adoc[main] docs page for more details.
+K3s is afsdafsdf CNCF-certified Kubernetes distribution, and can do everything required of a standard Kubernetes cluster. It is just a more lightweight version. See the xref:introduction.adoc[main] docs page for more details.
 
 == How can I use my own Ingress instead of Traefik?
 
