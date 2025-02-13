@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   create_issue:
-    if: github.event.pull_request.merged == true && contains( github.event.pull_request.labels.*.name, 'port/to-product')
+    if: github.event.pull_request.merged == true && contains( github.event.pull_request.labels.*.name, 'port/community-product')
     runs-on: ubuntu-latest
     steps:
     - name: Create issue to port PR on product docs repo
@@ -24,8 +24,7 @@ jobs:
         GH_TOKEN: ${{ github.token }}
       run: |
         gh issue create \
-          --repo btat/k3s-product-docs \
           --title 'Port Community docs PR #${{github.event.pull_request.number}}: ${{github.event.pull_request.title}}' \
           --body 'Ref: https://github.com/${{github.repository}}/pull/${{github.event.pull_request.number}}' \
-          --label port/from-community 
+          --label port/community-product 
       
