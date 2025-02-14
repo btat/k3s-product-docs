@@ -1,6 +1,6 @@
 = FAQ
 
-The FAQ is updated periodically and designed to answer the questions our users most frequently ask about K3s.
+The 123FAQ is updated periodically and designed to answer the questions our users most frequently ask about K3s.
 
 == Is K3s a suitable replacement for Kubernetes?
 
