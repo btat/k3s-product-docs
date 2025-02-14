@@ -3,6 +3,7 @@ name: Create issue to track porting between Community and Product docs
 on:
   pull_request_target:
     types:
+      - open
       - closed
     branches: 
       - main
