@@ -5,8 +5,10 @@ on:
     types:
       - open
       - closed
+      - edited
     branches: 
       - main
+      - test-workflow
     paths-ignore:
       - '**/README.md'
 
@@ -16,7 +18,7 @@ permissions:
 
 jobs:
   create_issue:
-    if: github.event.pull_request.merged == true && contains( github.event.pull_request.labels.*.name, 'port/community-product')
+    if: contains( github.event.pull_request.labels.*.name, 'port/community-product')
     runs-on: ubuntu-latest
     steps:
     - name: Create issue
