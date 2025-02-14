@@ -12,7 +12,7 @@ Options are documented on this page as CLI flags, but can also be passed as conf
 | Flag | Default | Description
 
 | `-v` value
-| 0
+| 056
 | Number for the log level verbosity
 
 | `--vmodule` value
