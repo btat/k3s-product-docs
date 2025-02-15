@@ -24,6 +24,7 @@ jobs:
     - name: Create issue
       env:
         GH_TOKEN: ${{ github.token }}
+        REPO_TYPE: ${{ github.repository = *'product-docs' && 'Product' || 'Community' }}
       run: |
         repo_type='Community'
         if [[ ${{github.repository}} = *'product-docs' ]]; then
@@ -31,6 +32,6 @@ jobs:
         fi
         gh issue create \
           --repo ${{github.repository}} \
-          --title 'Port ${repo_type} docs PR #${{github.event.pull_request.number}}: ${{github.event.pull_request.title}}' \
-          --body 'Reference: https://github.com/${{github.repository}}/pull/${{github.event.pull_request.number}}' \
+          --title 'Port ${{ REPO_TYPE }} docs PR #${{ github.event.pull_request.number }}: ${{ github.event.pull_request.title }}' \
+          --body 'Reference: https://github.com/${{ github.repository }}/pull/${{ github.event.pull_request.number }}' \
           --label port/community-product 
