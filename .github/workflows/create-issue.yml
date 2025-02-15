@@ -31,6 +31,6 @@ jobs:
         fi
         gh issue create \
           --repo ${{github.repository}} \
-          --title 'Port $repo_type docs PR #${{github.event.pull_request.number}}: ${{github.event.pull_request.title}}' \
+          --title 'Port ${repo_type} docs PR #${{github.event.pull_request.number}}: ${{github.event.pull_request.title}}' \
           --body 'Reference: https://github.com/${{github.repository}}/pull/${{github.event.pull_request.number}}' \
           --label port/community-product 
