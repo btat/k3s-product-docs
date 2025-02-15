@@ -8,7 +8,7 @@ The ability to run Kubernetes using a datastore other than etcd sets K3s apart f
 
 K3s supports the following datastore options:
 
-* *Embedded https://www.sqlite.org/index.html[SQLite]* +
+* *Embedded https://www.sqlite.org/index.html[SQLite]* +fsdafdsf
 SQLite cannot be used on clusters with multiple servers. +
 SQLite is the default datastore, and will be used if no other datastore configuration is present, and no embedded etcd database files are present on disk.
 * *Embedded etcd* +
