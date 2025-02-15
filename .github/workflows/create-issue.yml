@@ -24,10 +24,10 @@ jobs:
     - name: Create issue
       env:
         GH_TOKEN: ${{ github.token }}
-        REPO_TYPE: 'product-docs'
+        Repo_Type: ${{ contains( github.repository, 'product-docs') && 'Product' || 'Community' }}
       run: |
         gh issue create \
           --repo ${{github.repository}} \
-          --title 'Port ${{ REPO_TYPE }} docs PR #${{ github.event.pull_request.number }}: ${{ github.event.pull_request.title }}' \
+          --title 'Port ${{ Repo_Type }} docs PR #${{ github.event.pull_request.number }}: ${{ github.event.pull_request.title }}' \
           --body 'Reference: https://github.com/${{ github.repository }}/pull/${{ github.event.pull_request.number }}' \
           --label port/community-product 
