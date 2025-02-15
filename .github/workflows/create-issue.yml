@@ -24,7 +24,7 @@ jobs:
     - name: Create issue
       env:
         GH_TOKEN: ${{ github.token }}
-        REPO_TYPE: ${{ github.repository = *'product-docs' && 'Product' || 'Community' }}
+        REPO_TYPE: ${{ contains( github.repository, 'product-docs') && 'Product' || 'Community' }}
       run: |
         repo_type='Community'
         if [[ ${{github.repository}} = *'product-docs' ]]; then
