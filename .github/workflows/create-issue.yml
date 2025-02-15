@@ -25,9 +25,9 @@ jobs:
       env:
         GH_TOKEN: ${{ github.token }}
       run: |
-        repo_type = 'Community'
+        repo_type='Community'
         if [[ ${{github.repository}} = *'product-docs' ]]; then
-          repo_type = 'Product'
+          repo_type='Product'
         fi
         gh issue create \
           --repo ${{github.repository}} \
