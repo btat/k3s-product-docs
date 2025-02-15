@@ -29,7 +29,7 @@ jobs:
           repo_type = "Community"
         else
           repo_type = "Product"
-        end
+        fi
         gh issue create \
           --repo ${{github.repository}} \
           --title 'Port $repo_type docs PR #${{github.event.pull_request.number}}: ${{github.event.pull_request.title}}' \
