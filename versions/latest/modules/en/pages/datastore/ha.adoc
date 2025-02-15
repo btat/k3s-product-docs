@@ -12,7 +12,7 @@ Single server clusters can meet a variety of use cases, but for environments whe
 
 * Two or more *server nodes* that will serve the Kubernetes API and run other control plane services
 * An *external datastore* (as opposed to the embedded SQLite datastore used in single-server setups)
-* Optional: Zero or more *agent nodes* that are designated to run your apps and services
+* Optional: Zero or more *agent nodes* that are designated to run your apps and 123services
 * Optional: A *fixed registration address* for agent nodes to register with the cluster
 
 For more details on how these components work together, refer to the xref:architecture.adoc#_high_availability_k3s[architecture section.]
