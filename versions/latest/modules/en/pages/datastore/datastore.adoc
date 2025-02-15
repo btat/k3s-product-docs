@@ -6,7 +6,7 @@ The ability to run Kubernetes using a datastore other than etcd sets K3s apart f
 * If you need to run a simple, short-lived cluster in your CI/CD environment, you can use the embedded SQLite database
 * If you wish to deploy Kubernetes on the edge and require a highly available solution but can't afford the operational overhead of managing a database at the edge, you can use K3s's embedded HA datastore built on top of embedded etcd.
 
-K3s supports the following datastore options:
+K3s supports the following datastore options:fsadfdsf
 
 * *Embedded https://www.sqlite.org/index.html[SQLite]* +fsdafdsf
 SQLite cannot be used on clusters with multiple servers. +
