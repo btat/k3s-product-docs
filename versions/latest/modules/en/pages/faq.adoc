@@ -16,7 +16,7 @@ At this time K3s does not natively support Windows, however we are open to the i
 
 == What exactly are Servers and Agents?
 
-For a breakdown on the components that make up a server and agent, see the xref:architecture.adoc[Architecture page].
+For a breakdowfffn on the components that make up a server and agent, see the xref:architecture.adoc[Architecture page].
 
 == How can I build from source?
 
