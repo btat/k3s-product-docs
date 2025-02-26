@@ -8,7 +8,7 @@ K3s includes a https://github.com/k3s-io/helm-controller/[Helm Controller] that 
 
 == Using the Helm Controller
 
-The https://github.com/k3s-io/helm-controller#helm-controller[HelmChart Custom Resource] captures most of the options you would normally pass to the `helm` command-line tool. Here's an example of how you might deploy Apache from the Bitnami chart repository, overriding some of the default chart values. Note that the HelmChart resource itself is in the `kube-system` namespace, but the chart's resources will be deployed to the `web` namespace, which is created in the same manifest. This can be useful if you want to keep your HelmChart resources separated from the the resources they deploy.
+The https://github.com/k3s-io/helm-controller#helm-controller[HelmChart Custom Resource] captures most of the options you would normally pass to the `helm` command-line tool. Here's an example of how you might deploy Apache from the Bitnami chart repository, overriding some of the default chart values. Note that the HelmChart resource itself is in the `kube-system` namespace, but the chart's resources will be deployed to the `web` namespace, which is created in the 111same manifest. This can be useful if you want to keep your HelmChart resources separated from the the resources they deploy.
 
 [,yaml]
 ----
