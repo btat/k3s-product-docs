@@ -1,13 +1,13 @@
 = Helm
 :page-languages: [en, ja, ko, zh]
-:revdate: 2025-05-26
+:revdate: 2025-05-28
 :page-revdate: {revdate}
 
 Helm is the package management tool of choice for Kubernetes. Helm charts provide templating syntax for Kubernetes YAML manifest documents. With Helm, developers or cluster administrators can create configurable templates known as Charts, instead of just using static manifests. For more information about creating your own Chart catalog, check out the docs at https://helm.sh/docs/intro/quickstart/.
 
 K3s does not require any special configuration to support Helm. Just be sure you have properly set the kubeconfig path as per the xref:cluster-access.adoc[cluster access] documentation.
 
-K3s includes a https://github.com/k3s-io/helm-controller/[Helm Controller] that manages installing, upgrading/reconfiguring, and uninstalling Helm charts using a HelmChart Custom Resource Definition (CRD). Paired with xref:installation/packaged-components.adoc[auto-deploying AddOn manifests], installing a Helm chart on your cluster can be automated by creating a single file on disk.
+K3s includes a https://github.com/k3s-io/helm-controller/[Helm Controller] that manages installing, upgrading/reconfiguring, and uninstalling Helm charts using a HelmChart Custom Resource Definition (CRD). Paired with xref:installation/packaged-components.adoc[auto-deploying AddOn manifests], installing a Helm chart on your cluster can be automated by creating a single file on disk. asdf
 
 == Using the Helm Controller
 
