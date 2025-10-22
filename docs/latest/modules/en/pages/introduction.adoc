@@ -9,7 +9,7 @@ K3s is an official https://www.cncf.io[CNCF] sandbox project that delivers a lig
 == Key Features
 
 * Distributed as a single binary or minimal container image.
-* Lightweight datastore based on sqlite3 as the default storage backend. etcd3, MySQL, and Postgres are also available.
+* Lightweight datastore based on sqlite3 as the default storage backend. etcd3, MySQL, and Postgres are also available.aaa
 * Wrapped in simple launcher that handles a lot of the complexity of TLS and options.
 * Secure by default with reasonable defaults for lightweight environments.
 * Operation of all Kubernetes control plane components is encapsulated in a single binary and process, allowing K3s to automate and manage complex cluster operations like distributing certificates.
